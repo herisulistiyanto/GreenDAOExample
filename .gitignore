@@ -1,5 +1,6 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Android template
+.DS_Store
+.externalNativeBuild
+
 # Built application files
 *.apk
 *.ap_
@@ -16,6 +17,7 @@ gen/
 out/
 
 # Gradle files
+.gradle/
 build/
 
 # Local configuration file (sdk path, etc)
@@ -38,16 +40,4 @@ captures/
 .idea
 
 # Keystore files
-*.jks
-
-# External native build folder generated in Android Studio 2.2 and later
-.externalNativeBuild
-
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Freeline
-freeline.py
-freeline/
-freeline_project_description.json
-
+# *.jks
