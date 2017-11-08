@@ -11,7 +11,7 @@ import org.greenrobot.greendao.annotation.Property;
 @Entity(nameInDb = "Student") //Table name in DB
 public class Student {
 
-    @Id(autoincrement = true)   //primary key
+    @Id(autoincrement = false)   //primary key
     private Long id;
     @Property(nameInDb = "nama") //row name
     private String nama;

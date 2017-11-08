@@ -45,17 +45,17 @@ public class MainActivity extends AppCompatActivity implements StudentDialog.Stu
         rvStudents.setLayoutManager(new LinearLayoutManager(this));
         rvStudents.setAdapter(adapter);
 
-        daoSession = ((MainApp) getApplication()).getDaoSession();
+        daoSession = ((MainApp) getApplication()).getDaoSession(); // akses singleton
 
         studentList = new ArrayList<>();
-        studentList = daoSession.getStudentDao().loadAll();
+        studentList = daoSession.getStudentDao().loadAll(); //memuat database
 
         adapter.updateStudentList(studentList);
     }
 
     @Override
     public void onSaveClick(Student student) {
-        daoSession.getStudentDao().insert(student);
+        daoSession.getStudentDao().insert(student); //menambahkan data
         adapter.updateStudentList(
                 daoSession.getStudentDao().loadAll()
         );
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements StudentDialog.Stu
     public void onDeleteClick(Long id) {
         for (Student student : daoSession.getStudentDao().loadAll()) {
             if (id.equals(student.getId())) {
-                daoSession.getStudentDao().delete(student);
+                daoSession.getStudentDao().delete(student); //menghapus data
                 adapter.updateStudentList(
                         daoSession.getStudentDao().loadAll()
                 );
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements StudentDialog.Stu
             if (id.equals(student.getId())) {
                 student.setNama(name);
                 student.setGender(gender);
-                daoSession.getStudentDao().update(student);
+                daoSession.getStudentDao().update(student); //modify data
                 adapter.updateStudentList(
                         daoSession.getStudentDao().loadAll()
                 );

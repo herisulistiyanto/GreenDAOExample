@@ -25,12 +25,18 @@
                 android:id="@+id/et_nama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:imeOptions="actionDone"
+                android:hint="NAMA"
                 tools:text="NAMA" />
 
             <EditText
                 android:id="@+id/et_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:hint="GENDER"
                 tools:text="GENDER" />
 
             <LinearLayout
